@@ -1,0 +1,14 @@
+{
+    "name": "ibrahimlawal/paystack-php-sample",
+    "require": {
+        "eidetic-limited/paystack-php": "^1.0"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "ibrahimlawal",
+            "email": "ibrahim@lawal.me"
+        }
+    ],
+    "minimum-stability": "stable"
+}
