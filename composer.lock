@@ -4,21 +4,21 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "dc048b0f31abf089e481714d75b00a99",
-    "content-hash": "d6b31adf2c3f502cd6958cd6cd512465",
+    "hash": "f46ee68bb65a8ba6f8c79b4d20f753e0",
+    "content-hash": "8483973b4795545bb8b4f7d959d7e5b7",
     "packages": [
         {
             "name": "eidetic-limited/paystack-php",
-            "version": "v1.0.5",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/eidetic-limited/paystack-php.git",
-                "reference": "6a64c9d38f9a9a9fa75345f7e126df666231b05c"
+                "reference": "55f06adfe557a597c4c8f71f8524a4fdd541bcd6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/eidetic-limited/paystack-php/zipball/6a64c9d38f9a9a9fa75345f7e126df666231b05c",
-                "reference": "6a64c9d38f9a9a9fa75345f7e126df666231b05c",
+                "url": "https://api.github.com/repos/eidetic-limited/paystack-php/zipball/55f06adfe557a597c4c8f71f8524a4fdd541bcd6",
+                "reference": "55f06adfe557a597c4c8f71f8524a4fdd541bcd6",
                 "shasum": ""
             },
             "require": {
@@ -32,12 +32,12 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.0.2-dev"
+                    "dev-master": "1.0-dev"
                 }
             },
             "autoload": {
                 "psr-4": {
-                    "Eidetic\\Paystack\\": "src"
+                    "Eidetic\\": "src"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -58,13 +58,15 @@
                 "eidetic-limited",
                 "paystack-php"
             ],
-            "time": "2016-02-08 11:54:19"
+            "time": "2016-02-09 05:51:12"
         }
     ],
     "packages-dev": [],
     "aliases": [],
-    "minimum-stability": "stable",
-    "stability-flags": [],
+    "minimum-stability": "dev",
+    "stability-flags": {
+        "eidetic-limited/paystack-php": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
