@@ -1,7 +1,7 @@
 {
     "name": "ibrahimlawal/paystack-php-sample",
     "require": {
-      "eidetic-limited/paystack-php":"^1.0@dev"
+      "yabacon/paystack-php":"^1.0@dev"
     },
     "license": "MIT",
     "authors": [

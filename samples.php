@@ -1,9 +1,9 @@
 <?php
 
 require dirname(__FILE__) . '/Paystack.php';
-\Paystack\Paystack::registerAutoloader();
+\YabaCon\Paystack::registerAutoloader();
 
-$paystack = new \Paystack\Paystack('sk_test_40899660eac2be0a6a6915f6ba32f81bc8bac143');
+$paystack = new \YabaCon\Paystack('sk_test_40899660eac2be0a6a6915f6ba32f81bc8bac143');
 
 // print_r($paystack->customer(12));
 // print_r($paystack->customer->list());
