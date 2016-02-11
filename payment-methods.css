@@ -1,0 +1,438 @@
+.payment-method-container {
+    font-weight: 400;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizelegibility;
+    margin: 30px auto;
+    max-width: 450px;
+}
+
+.payment-method-box {
+    zoom: 1;
+    border: 1px solid #d9d9d9;
+    border-image-source: initial;
+    border-image-slice: initial;
+    border-image-width: initial;
+    border-image-outset: initial;
+    border-image-repeat: initial;
+    border-radius: 4px;
+    background: #fff;
+    margin-bottom: 1.5em;
+    border-top: none;
+}
+
+.payment-method {
+    border-top: 1px solid #e6e6e6;
+}
+
+.payment-method label {
+    padding: 12px 1.1em;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.payment-method label:hover {
+    cursor: pointer;
+    background: #fafafe;
+}
+
+.payment-method input[type=checkbox]:not(old),.payment-method input[type=radio ]:not(old) {
+    width: 2em;
+    margin: 0;
+    padding: 0;
+    font-size: 1em;
+    opacity: 0;
+    display: none;
+}
+
+.payment-method input[type=checkbox]:not(old) + label,.payment-method input[type=radio ]:not(old) + label {
+    display: inline-block;
+    line-height: 40px;
+}
+
+.payment-method input[type=checkbox]:not(old) + label > span,.payment-method input[type=radio ]:not(old) + label > span {
+    float: left;
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    margin-top: 12px;
+    margin-right: 20px;
+    border: .0625em solid silver;
+    border-radius: .25em;
+    background: #e0e0e0;
+    background-image: -moz-linear-gradient(#f0f0f0,#e0e0e0);
+    background-image: -ms-linear-gradient(#f0f0f0,#e0e0e0);
+    background-image: -o-linear-gradient(#f0f0f0,#e0e0e0);
+    background-image: -webkit-linear-gradient(#f0f0f0,#e0e0e0);
+    background-image: linear-gradient(#f0f0f0,#e0e0e0);
+    vertical-align: bottom;
+}
+
+.payment-method input[type=checkbox]:not(old):checked + label > span,.payment-method input[type=radio ]:not(old):checked + label > span {
+    background-image: -moz-linear-gradient(#e0e0e0,#f0f0f0);
+    background-image: -ms-linear-gradient(#e0e0e0,#f0f0f0);
+    background-image: -o-linear-gradient(#e0e0e0,#f0f0f0);
+    background-image: -webkit-linear-gradient(#e0e0e0,#f0f0f0);
+    background-image: linear-gradient(#e0e0e0,#f0f0f0);
+}
+
+.payment-method input[type=checkbox]:not(old):checked + label > span:before {
+    content: '✓';
+    display: block;
+    width: 1em;
+    color: #9c6;
+    font-size: .875em;
+    line-height: 1em;
+    text-align: center;
+    text-shadow: 0 0 .0714em #73994d;
+    font-weight: 700;
+}
+
+.payment-method input[type=radio]:not(old):checked + label > span > span {
+    display: block;
+    float: left;
+    width: 10px;
+    height: 10px;
+    margin: 3px;
+    border: .0625em solid #73994d;
+    border-radius: .125em;
+    background: #9c6;
+    background-image: -moz-linear-gradient(#b3d98c,#9c6);
+    background-image: -ms-linear-gradient(#b3d98c,#9c6);
+    background-image: -o-linear-gradient(#b3d98c,#9c6);
+    background-image: -webkit-linear-gradient(#b3d98c,#9c6);
+    background-image: linear-gradient(#b3d98c,#9c6);
+}
+
+.payment-method label {
+    position: relative;
+}
+
+.payment-method label i.payment-logo {
+    float: right;
+    height: 40px;
+    width: 40px;
+    margin-left: 8px;
+}
+
+.payment-method label i.payment-image {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    overflow: auto;
+}
+
+.payment-method label i.mastercard {
+    background: url(images/mastercard.png);
+    background-size: contain;
+}
+
+.payment-method label i.visa {
+    background: url(images/visa.png);
+    background-size: contain;
+}
+
+.payment-method label i.paystack {
+    background: url(images/paystack.png);
+    background-size: contain;
+    display: block;
+}
+
+.payment-method label i.payment-text {
+    font-style: normal;
+    font-size: .9em;
+    font-weight: 700;
+    color: #777;
+}
+
+.payment-method label i img {
+    float: left;
+    vertical-align: middle;
+}
+
+.payment-method input[type="radio"]:checked+label i.payment-text {
+    color: #000;
+}
+
+.payment-btn {
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 1.25em;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+    font-weight: 500;
+    font-size: 16px;
+    -webkit-transition: color .2s ease-in-out,background-color .2s ease-in-out,border-color .2s ease-in-out,box-shadow .2s ease-in-out;
+    transition: color .2s ease-in-out,background-color .2s ease-in-out,border-color .2s ease-in-out,box-shadow .2s ease-in-out;
+    background-color: #2a9dcc;
+    color: #fff;
+}
+
+.payment-btn:hover {
+    background: #2a7dbc;
+}
+
+.payment-method-inner {
+    background-color: #fafafa;
+    padding: 20px;
+    font-size: 13px;
+    border-top: 1px solid #f0f0f0;
+}
+
+.payment-method table {
+    background: #eaebec;
+    border: #ccc 1px solid;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    -moz-box-shadow: 0 1px 2px #d1d1d1;
+    -webkit-box-shadow: 0 1px 2px #d1d1d1;
+    box-shadow: 0 1px 2px #d1d1d1;
+    width: 100%;
+}
+
+.payment-method table th {
+    padding: 11px 15px 12px;
+    border-top: 1px solid #fafafa;
+    border-bottom: 1px solid #e0e0e0;
+    text-align: left;
+    border-left: 1px solid #d0d0d0;
+}
+
+.payment-method table tr {
+    text-align: center;
+    padding-left: 20px;
+}
+
+.payment-method table td:first-child {
+    text-align: left;
+    padding-left: 20px;
+    border-left: 0;
+}
+
+.payment-method table th:first-child {
+    border-left: 0;
+}
+
+.payment-method table td {
+    padding: 18px;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #e0e0e0;
+    border-left: 1px solid #e0e0e0;
+    text-align: left;
+    background: #fafafa;
+    background: -webkit-gradient(linear,left top,left bottom,from(#fbfbfb),to(#fafafa));
+    background: -moz-linear-gradient(top,#fbfbfb,#fafafa);
+}
+
+.payment-method input[type=tel] {
+    border: 1px solid #ccc;
+    padding: 12px 8px;
+    margin: 5px 0;
+    outline: none;
+    min-width: 100px;
+}
+
+.sms {
+    margin-top: 20px;
+    overflow: auto;
+}
+
+.sms span {
+    display: block;
+}
+
+.sms input {
+    float: left;
+    margin-right: 20px;
+}
+
+.payment-btn.small-btn {
+    float: left;
+    width: 100px;
+    padding: 10px;
+    font-size: 13px;
+    background: #ccc;
+    color: #333;
+    margin: 5px 0 5px 10px;
+}
+
+.payment-method-inner {
+    display: none;
+}
+
+@media (max-width: 500px) {
+    .payment-method label i.paystack {
+        display: none;
+    }
+}
+
+body {
+  font-size: none;
+}
+
+.form-control.error{
+  color:red;
+  border-color: red;
+
+}
+.green-border{
+  color:green;
+  border-color: green;
+
+}
+/* Absolute Center Spinner */
+.loading {
+  position: fixed;
+  z-index: 999;
+  height: 2em;
+  width: 2em;
+  overflow: show;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+/* Transparent Overlay */
+.loading:before {
+  content: '';
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.3);
+}
+
+/* :not(:required) hides these rules from IE9 and below */
+.loading:not(:required) {
+  /* hide "loading..." text */
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+
+.loading:not(:required):after {
+  content: '';
+  display: block;
+  font-size: 10px;
+  width: 1em;
+  height: 1em;
+  margin-top: -0.5em;
+  -webkit-animation: spinner 1500ms infinite linear;
+  -moz-animation: spinner 1500ms infinite linear;
+  -ms-animation: spinner 1500ms infinite linear;
+  -o-animation: spinner 1500ms infinite linear;
+  animation: spinner 1500ms infinite linear;
+  border-radius: 0.5em;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.75) 1.5em 0 0 0, rgba(0, 0, 0, 0.75) 1.1em 1.1em 0 0, rgba(0, 0, 0, 0.75) 0 1.5em 0 0, rgba(0, 0, 0, 0.75) -1.1em 1.1em 0 0, rgba(0, 0, 0, 0.5) -1.5em 0 0 0, rgba(0, 0, 0, 0.5) -1.1em -1.1em 0 0, rgba(0, 0, 0, 0.75) 0 -1.5em 0 0, rgba(0, 0, 0, 0.75) 1.1em -1.1em 0 0;
+  box-shadow: rgba(0, 0, 0, 0.75) 1.5em 0 0 0, rgba(0, 0, 0, 0.75) 1.1em 1.1em 0 0, rgba(0, 0, 0, 0.75) 0 1.5em 0 0, rgba(0, 0, 0, 0.75) -1.1em 1.1em 0 0, rgba(0, 0, 0, 0.75) -1.5em 0 0 0, rgba(0, 0, 0, 0.75) -1.1em -1.1em 0 0, rgba(0, 0, 0, 0.75) 0 -1.5em 0 0, rgba(0, 0, 0, 0.75) 1.1em -1.1em 0 0;
+}
+
+/* Animation */
+
+@-webkit-keyframes spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@-moz-keyframes spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@-o-keyframes spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+.donate-box {
+  background: #fefefe;
+  border: 1px solid #ddd;
+  padding: 20px;
+  line-height: 1.6em;
+  border-bottom: none;
+}
+
+.donate-box h1 {
+  font-size: 18px;
+  padding: 0;
+  margin: 0;
+}
+
+h3 {
+  font-size: 18px;
+  border-top: 1px solid #eee;
+  padding-top: 22px;
+  margin-top: 20px;
+}
+
+.container {
+  max-width: 600px;
+}
+
+.top {
+  padding-top: 20px;
+}
+
+label {
+  color: #777;
+}
