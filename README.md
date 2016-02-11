@@ -2,7 +2,7 @@
 A sample PHP Composer app that uses the [YabaCon\Paystack](https://packagist.org/packages/yabacon/paystack-php) composer package to perform a standard integration.
 
 ## To run the sample
-download the files and extract 
+[download](archive/sample.zip) the files and extract 
 
 1. cd to the folder:
 ```bash
