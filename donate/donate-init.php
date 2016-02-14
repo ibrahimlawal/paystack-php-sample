@@ -46,8 +46,12 @@ if ((intval($code) === 200) && array_key_exists('status', $body) && $body['statu
 // redirect to receive payment
     header('Location: '.$url);
     die();
+} elseif ((array_key_exists('status', $body) && !$body['status'])) {
+// invalid body was returned
+// handle this or troubleshoot
+    throw new \Exception('HTTP Code: ' . $code . 'Transaction Initialise returned status: '.$body['message']);
 } else {
 // invalid body was returned
 // handle this or troubleshoot
-    throw new \Exception('Transaction Initialise returned non-true status');
+    throw new \Exception('Transaction Initialise failed');
 }

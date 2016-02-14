@@ -23,10 +23,14 @@ if (file_exists('results/' . $code . '-request.json')) {
             file_put_contents('results/' . $code . '-response.json', json_encode($body));
 
             echo $data['status']; // tell the status to the customer
+        } else if ((array_key_exists('status', $body) && !$body['status'])) {
+// invalid body was returned
+// handle this or troubleshoot
+            throw new \Exception('HTTP Code: ' . $code . '. Transaction Initialise failed with message: '.$body['message']);
         } else {
         // invalid body was returned
         // handle this or troubleshoot
-            throw new \Exception('Transaction Initialise returned non-true status');
+            throw new \Exception('HTTP Code: ' . $code . 'Transaction Verify failed');
         }
         
     }
