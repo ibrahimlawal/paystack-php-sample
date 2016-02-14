@@ -1,0 +1,3 @@
+[submodule "android-web-service/paystack-class"]
+	path = android-web-service/paystack-class
+	url = https://github.com/yabacon/paystack-class.git
