@@ -1,17 +1,12 @@
 # paystack-php-sample
-A sample PHP Composer app that uses the [YabaCon\Paystack](https://packagist.org/packages/yabacon/paystack-php) composer package to perform a standard integration.
+A sample PHP app that uses the [Paystack Class](https://github.com/yabacon/paystack-class) to perform a standard integration.
 
 ## To run a sample
 1. [Download](https://github.com/ibrahimlawal/paystack-php-sample/archive/master.zip) the repo.
 
-2. cd to a sample folder:
-```bash
-cd /path/to/sample
-```
+2. Extract
 
-3. change the `PAYSTACK_SECRET_KEY` in [functions.php](functions.php) to your paystack sceret key gotten from > https://dashboard.paystack.co/#/settings/developer
-
-4. Follow instructions in the README.md of the seected sample
+3. Follow instructions in the README.md of the sample you need
 
 ## Folders
 

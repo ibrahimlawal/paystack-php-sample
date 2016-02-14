@@ -1,4 +1,4 @@
-# paystack-php-sample
+# donate
 A sample PHP Composer app that uses the [YabaCon\Paystack](https://packagist.org/packages/yabacon/paystack-php) composer package to perform a standard integration.
 
 ## To run the sample
@@ -10,7 +10,7 @@ cd /path/to/donate
 ```bash
 composer install
 ```
-3. change the `PAYSTACK_SECRET_KEY` in [functions.php](functions.php) to your paystack sceret key gotten from > https://dashboard.paystack.co/#/settings/developer
+3. change the `PAYSTACK_SECRET_KEY` in [functions.php](functions.php) to your paystack secret key gotten from > https://dashboard.paystack.co/#/settings/developer
 
 4. on same page, ([https://dashboard.paystack.co/#/settings/developer](https://dashboard.paystack.co/#/settings/developer)) set the callback url to the url to `donate-conclude.php`
 

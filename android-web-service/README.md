@@ -1,24 +1,20 @@
-# paystack-php-sample
-A sample PHP Composer app that uses the [YabaCon\Paystack](https://packagist.org/packages/yabacon/paystack-php) composer package to perform a standard integration.
+# android-web-service
+A sample PHP app that uses the [Paystack Class](https://github.com/yabacon/paystack-class) to receive call from an android app. A sample android app, and the source code for the Paystack Android library, are [here](https://github.com/PaystackHQ/paystack-android). 
 
 ## To run the sample
 1. cd to the folder:
 ```bash
-cd /path/to/donate
+cd /path/to/android-web-service
 ```
-2. run composer install ... details on getting composer here > https://getcomposer.org/
-```bash
-composer install
-```
-3. change the `PAYSTACK_SECRET_KEY` in [functions.php](functions.php) to your paystack secret key gotten from > https://dashboard.paystack.co/#/settings/developer
+2. change the `PAYSTACK_SECRET_KEY` in [functions.php](functions.php) to your paystack secret key gotten from > https://dashboard.paystack.co/#/settings/developer
 
-4. call charge-token.php?token=PSTK_xxx&email=xxxxx from the browser
+3. call `//url.domain.tld/to/charge-token.php?token=PSTK_xxx&email=xxxxx` from the android app with a token generated using the [Paystack Android Library](https://github.com/PaystackHQ/paystack-android).
 
 ## Files
 
 * [charge-token.php](charge-token.php) includes code that show how to charge a token
 * [charge-authorization.php](charge-authorization.php) includes code that show how to charge an authorization code
-* [results](results) will have a json log of tansactions named by their trxref
+* [results](results) will have a json log of transactions
 
 ## Contributing
 
