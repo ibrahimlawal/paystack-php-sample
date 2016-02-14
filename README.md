@@ -9,7 +9,7 @@ This repo includes a submodule and must be cloned recursively using:
 git clone https://github.com/ibrahimlawal/paystack-php-sample.git --recursive
 ```
 
-3. Follow instructions in the README.md of the sample you need
+2. Follow instructions in the README.md of the sample you need
 
 ## Folders
 

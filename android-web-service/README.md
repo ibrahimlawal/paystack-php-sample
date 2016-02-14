@@ -6,7 +6,10 @@ A sample PHP app that uses the [Paystack Class](https://github.com/yabacon/payst
 ```bash
 cd /path/to/android-web-service
 ```
-2. change the `PAYSTACK_SECRET_KEY` in [functions.php](functions.php) to your paystack secret key gotten from > https://dashboard.paystack.co/#/settings/developer
+
+1.5 if you downloaded this repo, you need to cd into `android-web-service/paystack-class` and download and unzip the [Paystack Class Master](https://github.com/yabacon/paystack-class/archive/master.zip) into it.
+
+2. Change the `PAYSTACK_SECRET_KEY` in [functions.php](functions.php) to your paystack secret key gotten from > https://dashboard.paystack.co/#/settings/developer
 
 3. call `//url.domain.tld/to/charge-token.php?token=PSTK_xxx&email=xxxxx` from the android app with a token generated using the [Paystack Android Library](https://github.com/PaystackHQ/paystack-android).
 
