@@ -9,7 +9,7 @@ $req = [];
 
 // add the time of the request to the array
 $req['time'] = gmdate("Y-m-d\TH:i:s\Z");
-// add the user's ip to tthe array
+// add the user's ip to the array
 $req['ip'] = getIp();
 // get the formdata submitted
 $req['form'] = json_encode($_POST);
