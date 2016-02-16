@@ -7,8 +7,8 @@ require __DIR__ . '/paystack-class/Paystack.php';
 require './functions.php';
 
 // Configuration options
-$config['paystack_key_test_secret']         = 'sk_test_xxxx';
-$config['paystack_key_live_secret']         = 'sk_live_xxxx';
+$config['paystack_key_test_secret']         = PAYSTACK_TEST_SECRET_KEY;
+$config['paystack_key_live_secret']         = PAYSTACK_LIVE_SECRET_KEY;
 $config['paystack_test_mode']               = true; // set to false when you are ready to go live
 
 $paystack = new Paystack($config);

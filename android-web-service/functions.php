@@ -2,7 +2,8 @@
 error_reporting(-1);
 require './luhn-creator.php';
 
-define('PAYSTACK_SECRET_KEY', 'sk_test_xxx');
+define('PAYSTACK_TEST_SECRET_KEY', 'sk_test_xxxxx');
+define('PAYSTACK_LIVE_SECRET_KEY', 'sk_live_xxxxx');
 
 function getIp()
 {
