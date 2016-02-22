@@ -1,5 +1,5 @@
 # Paystack PHP Samples
-Sample PHP apps that use the [Paystack Class](https://github.com/yabacon/paystack-class) and the [YabaCon\Paystack](https://packagist.org/packages/yabacon/paystack-php) composer package.
+Sample PHP apps that use the [Paystack Class](https://github.com/yabacon/paystack-class), the [YabaCon\Paystack](https://packagist.org/packages/yabacon/paystack-php) package and the [Mabiola\Paystack-PHP-Lib](https://packagist.org/packages/mabiola/paystack-php-lib) package.
 
 ## To run a sample
 1. Clone this repo. 
@@ -15,6 +15,7 @@ git clone https://github.com/ibrahimlawal/paystack-php-sample.git --recursive
 
 * [donate](donate) A sample composer-based donate page using the [YabaCon\Paystack](https://packagist.org/packages/yabacon/paystack-php) composer package.
 * [android-web-service](android-web-service) A sample android web service that uses the [Paystack Class](https://github.com/yabacon/paystack-class).
+* [request-payment](request-payment) A sample Laravel app that uses the [Mabiola\Paystack-PHP-Lib](https://packagist.org/packages/mabiola/paystack-php-lib) to send payment requests to customers.
 
 ## Contributing
 
