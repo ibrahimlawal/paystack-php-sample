@@ -1,3 +1,6 @@
 [submodule "android-web-service/paystack-class"]
 	path = android-web-service/paystack-class
 	url = https://github.com/yabacon/paystack-class.git
+[submodule "request-payments"]
+	path = request-payments
+	url = https://github.com/yabacon/laravel-paystack-sample.git
