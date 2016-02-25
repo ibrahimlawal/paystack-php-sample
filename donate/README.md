@@ -23,7 +23,7 @@ composer install
 
 ## Contributing
 
-Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
+Please see [CONTRIBUTING](../CONTRIBUTING.md) for details.
 
 ## Security
 

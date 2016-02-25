@@ -21,7 +21,7 @@ cd /path/to/android-web-service
 
 ## Contributing
 
-Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
+Please see [CONTRIBUTING](../CONTRIBUTING.md) for details.
 
 ## Security
 
