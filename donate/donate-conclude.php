@@ -6,7 +6,7 @@
 require __DIR__ . '/vendor/autoload.php';
 require './functions.php';
 
-$paystack = new \YabaCon\Paystack(PAYSTACK_SECRET_KEY);
+$paystack = new \Yabacon\Paystack(PAYSTACK_SECRET_KEY);
 
 $code = filter_input(INPUT_GET, 'trxref');
 if (file_exists('results/' . $code . '-request.json')) {
@@ -19,7 +19,7 @@ if (file_exists('results/' . $code . '-request.json')) {
         
         $data = $response->data; // more about data on: https://developers.paystack.co/docs/verifying-transactions
         // do what you want with data
-        file_put_contents('results/' . $code . '-response.json', json_encode($body));
+        file_put_contents('results/' . $code . '-response.json', json_encode($response));
         echo $data->status; // tell the status to the customer
     }
 }

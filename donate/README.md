@@ -12,9 +12,7 @@ composer install
 ```
 3. change the `PAYSTACK_SECRET_KEY` in [functions.php](functions.php) to your paystack secret key gotten from > https://dashboard.paystack.co/#/settings/developer
 
-4. on same page, ([https://dashboard.paystack.co/#/settings/developer](https://dashboard.paystack.co/#/settings/developer)) set the callback url to the url to `donate-conclude.php`
-
-5. open index.php in the browser and complete the transaction
+4. open index.php in the browser and complete the transaction
 
 ## Files
 

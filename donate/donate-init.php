@@ -2,7 +2,7 @@
 require __DIR__ . '/vendor/autoload.php';
 require './functions.php';
 
-$paystack = new \YabaCon\Paystack(PAYSTACK_SECRET_KEY);
+$paystack = new \Yabacon\Paystack(PAYSTACK_SECRET_KEY);
 
 // an array object to store the request to file
 $req = [];
@@ -33,12 +33,15 @@ if (!$req['amountngn']) {
     die('An invalid amount was sent');
 }
 
-// initiate transaction (Remember to change this if you are using Guzzle
+// initiate transaction (Remember to change this if you are using Guzzle)
+$virdir = new VirtualDirectory();
+
 // Check the README here > https://github.com/yabacon/paystack-php/
 $response = $paystack->transaction->initialize([
                 'reference'=>$newcode,
                 'amount'=>$req['amountngn'] * 100, // in kobo
-                'email'=>$req['email']
+                'email'=>$req['email'],
+                'callback_url'=>rtrim($virdir->thisURL,'/') . '/donate-conclude.php'
               ]);
 // check if transaction url was generated
 $url = $response->data->authorization_url; // more about data on: https://developers.paystack.co/docs/paystack-standard
