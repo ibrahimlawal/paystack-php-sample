@@ -35,23 +35,14 @@ if (!$req['amountngn']) {
 
 // initiate transaction (Remember to change this if you are using Guzzle
 // Check the README here > https://github.com/yabacon/paystack-php/
-list($headers, $body, $code) = $paystack->transaction->initialize([
+$response = $paystack->transaction->initialize([
                 'reference'=>$newcode,
                 'amount'=>$req['amountngn'] * 100, // in kobo
                 'email'=>$req['email']
               ]);
 // check if transaction url was generated
-if ((intval($code) === 200) && array_key_exists('status', $body) && $body['status']) {
-    $url = $body['data']['authorization_url']; // more about data on: https://developers.paystack.co/docs/paystack-standard
+$url = $response->data->authorization_url; // more about data on: https://developers.paystack.co/docs/paystack-standard
 // redirect to receive payment
-    header('Location: '.$url);
-    die();
-} elseif ((array_key_exists('status', $body) && !$body['status'])) {
-// invalid body was returned
-// handle this or troubleshoot
-    throw new \Exception('HTTP Code: ' . $code . 'Transaction Initialise returned status: '.$body['message']);
-} else {
-// invalid body was returned
-// handle this or troubleshoot
-    throw new \Exception('Transaction Initialise failed');
-}
+header('Location: '.$url);
+die();
+
