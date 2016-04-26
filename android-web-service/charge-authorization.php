@@ -35,31 +35,21 @@ if ($email && is_string($auth_code) && (substr_compare($auth_code, 'AUTH_', 0, 5
     file_put_contents('results/' . $reference . '-auth-request.json', json_encode($request));
 
   // make the paystack call - charge on the request params
-    list($headers, $body, $code) = $paystack->transaction->charge($request['params']);
+    $body = $paystack->transaction->charge($request['params']);
 //     header('Content-Type: application/json');
 //     echo json_encode([$headers, $body, $code]);
   
   // test that the status code was 200 and the body gave status true, and there's data in body
-    if ((intval($code)===200) && array_key_exists('status', $body) && $body['status'] && array_key_exists('data', $body)) {
-        $response_data = $body['data'];
-        // save the response data for customer in database
-          // we are using a file-based storage in results folder
-            file_put_contents('results/' . $reference . '-response.json', json_encode($body));
+    $response_data = $body->data;
+    // save the response data for customer in database
+      // we are using a file-based storage in results folder
+        file_put_contents('results/' . $reference . '-response.json', json_encode($body));
 
-          // in this sample we simply echo the status, rather you should go ahead and check
-          echo $response_data['status'];
-     // data should also have status of success if the 100 naira charge was successful
-        if (array_key_exists('status', $response_data) && ($response_data['status']==='success')) {
-          // do what you need to do to serve your customer. payment went through
-        }
-    } elseif ((array_key_exists('status', $body) && !$body['status'])) {
-// invalid body was returned
-// handle this or troubleshoot
-        throw new \Exception('HTTP Code: ' . $code . '. Charge failed with message: '.$body['message']);
-    } else {
-        // invalid body was returned
-        // handle this or troubleshoot
-        throw new \Exception('HTTP Code: ' . $code . 'Charge  failed');
+      // in this sample we simply echo the status, rather you should go ahead and check
+      echo $response_data->status;
+ // data should also have status of success if the 100 naira charge was successful
+    if ($response_data->status==='success') {
+      // do what you need to do to serve your customer. payment went through
     }
   
 } else {
