@@ -15,7 +15,7 @@ cd /path/to/android-web-service
 
 ## Files
 
-* [charge-token.php](charge-token.php) includes code that show how to charge a token
+* [verify-transaction.php](verify-transaction.php) includes code that show how to verify a transaction
 * [charge-authorization.php](charge-authorization.php) includes code that show how to charge an authorization code
 * [results](results) will have a json log of transactions
 
