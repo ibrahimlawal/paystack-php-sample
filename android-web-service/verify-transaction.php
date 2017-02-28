@@ -13,33 +13,14 @@ $config['paystack_test_mode']       = true; // set to false when you are ready t
 
 $paystack = new Paystack($config);
 
-$token = filter_input(INPUT_GET, 'token');
+$reference = filter_input(INPUT_GET, 'reference');
 $email = filter_input(INPUT_GET, 'email', FILTER_VALIDATE_EMAIL);
-if ($email && is_string($token) && (substr_compare($token, 'PSTK_', 0, 5, true)===0)) {
-  // get a code to use for this request
-    $reference = getUnusedCode();
-    $request['params'] = [
-                'reference'=>$reference,
-                'token'=>$token,
-                'email'=>$email,
-                'amount'=>100 // in kobo, we only want to verify that the card is authentic, so we charge just 1 naira
-              ];
-// add the time of the request to the array
-    $request['time'] = gmdate("Y-m-d\TH:i:s\Z");
-// add the user's ip to the array
-    $request['ip'] = getIp();
-              
-  // log the request to our file-based storage
-  // save the array to a file named by the code chosen
-    file_put_contents('results/' . $reference . '-request.json', json_encode($request));
-
-  // make the paystack call on the request params
-    $body = $paystack->transaction->chargeToken($request['params']);
-  
+$body = $paystack->transaction->verify(['reference'=>$reference]);
+if($reference){  
 // You should get - and save - the authorization code so you may charge the customer in future
     $response_data = $body->data;
     // data should also have status success if the 1 naira charge was successful
-    if ($response_data->status==='success') {
+    if ($response_data->status==='success' && $response_data->customer->email===$email) {
       // save the authorization code for customer in database
       // we are using a file-based storage in results folder
         file_put_contents('results/' . $reference . '-response.json', json_encode($body));
@@ -50,9 +31,11 @@ if ($email && is_string($token) && (substr_compare($token, 'PSTK_', 0, 5, true)=
         header('Content-Type: application/json');
         echo json_encode($response_data->authorization);
       // echo $response_data['authorization']['card_type'] . ' card ending with ' . $response_data['authorization']['last4'] . ' was sucessfully validated.';
+    } else {
+      // transaction didn't succeed or is not owned by the email expected
     }
 
   
 } else {
-    throw new \Exception('A valid email and a valid Paystack token is required.');
+    throw new \Exception('A valid reference is required.');
 }
