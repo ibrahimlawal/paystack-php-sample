@@ -41,7 +41,7 @@ class VirtualDirectory
     var $baseURL;
     var $thisURL;
 
-    function VirtualDirectory()
+    function __construct()
     {
         $this->protocol = (array_key_exists('HTTPS', $_SERVER) && $_SERVER['HTTPS'] == 'on') ? 'https' : 'http';
         $this->site = $this->protocol . '://' . $_SERVER['HTTP_HOST'];
